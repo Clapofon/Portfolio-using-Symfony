@@ -1,0 +1,12 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block main %}
+    <div class="container">
+        {% for project in projects %}
+            <div>
+                <div>{{ project.name }}</div>
+                <div>{{ project.description }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

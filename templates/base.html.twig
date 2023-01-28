@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}Home{% endblock %}</title>
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/fontello.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,900&display=swap" rel="stylesheet">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    
+    <body>
+        <main class="main flex">
+            <video src="{% block videoPath %}{% endblock %}" autoplay loop muted class="landing-page-video">
+            </video>
+
+            {% block main %}{% endblock %}
+
+        </main>
+        <footer class="footer flex">
+        <section class="upper-footer flex">
+            <div class="footer-item">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        Email: michal.nowrot@protonmail.com
+                    </li>
+                    <li>
+                        Phone: 535 083 873
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>Projects</h3>
+                <h4>Blender</h4>
+                <ul>
+                    <li>
+                        <a href="/projects/franklins house">
+                            Franklin's house
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/projects/modern house">
+                            Modern house
+                        </a>
+                    </li>
+                </ul>
+                <h4>After Effects</h4>
+                <ul>
+                    <li>
+                        <a href="/projects/franklins house">
+                            Franklin's house
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects/modern house">
+                            Modern house
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>Go back on top</h3>
+                <button class="return-to-top-button"><i class="icon-up-big"></i></button>
+            </div>
+        </section>
+        <section class="lower-footer container-fluid flex">
+            Copyright &copy; 2022 JdOrka.com. All Rights Reserved.
+        </section>
+    </footer>
+
+        {% block javascriptsBody %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

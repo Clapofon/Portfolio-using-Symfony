@@ -1,0 +1,113 @@
+{% extends('base.html.twig') %}
+
+{% block videoPath %}video/landingPageVideo.mp4{% endblock %}
+
+{% block main %}
+
+    <div class="lp-content flex" style="align-items: center;">
+        <div style="width: 70%;">
+            <div class="lp-headers">
+                <h1 class="lp-header"></h1>
+                <h3 class="lp-minor-header"></h3>
+            </div>
+        </div>
+    </div>
+
+    <section class="container flex">
+        <div class="icon anim">
+            <img src="images/blender-icon.svg" style="width: 100% !important;">
+        </div>
+        <div class="description anim">
+            Vast majority of my work ( <span class="bold-text">modeling, texturing, rendering</span> ) is done in Blender. Did a couple of <span class="bold-text"><a href="projects.html">projects</a></span> through the course of half a year, mostly architectural visualizations.
+            
+        </div>
+    </section>
+
+    <section class="container flex">
+        <div class="description anim">
+            For motion graphics, VFX and post production Adobe After Effects is an obvious choice for me. My work in After Effect goes on for about a year and in that time I have managed to complete few <span class="bold-text"><a href="ae-projects.html">projects</a></span>.
+        </div>
+        <div class="icon anim">
+            <img src="images/after-effects.svg">
+        </div>
+    </section>
+
+    <section class="container flex">
+        <div class="icon anim">
+            <img src="images/premiere-pro.svg">
+        </div>
+        <div class="description anim">
+            I use Adobe Premiere Pro for small, short animations which do not require many layers. Premiere Pro satisfies my needs for basic video, audio editing.
+        </div>
+    </section>
+
+    <section class="container flex">
+        <div class="description anim">
+            Photo retouch, architectural visulization, post production as well as making <span class="bold-text">assets</span>. That is the domain of Adobe Photoshop in my workflow.
+        </div>
+        <div class="icon anim">
+            <img src="images/photoshop.svg">
+        </div>
+    </section>
+
+    <section class="container flex">
+        <h2 class="preview-header">
+            Franklin's house replica from GTA V
+        </h2>
+
+        <div class="render-preview flex">
+            <div class="render anim" style="transform: rotate(-10deg);">
+                <img src="images/test render without interior.png">
+            </div>
+            <div class="render anim" style="transform: rotate(5deg);">
+                <img src="images/test render without interior.png">
+            </div>
+
+
+            <div class="render anim" style="transform: rotate(12deg) translateY(-50px);">
+                <img src="images/test render without interior.png">
+            </div>
+            <div class="description flex container-fluid anim">
+                A mansion designed with luxury in mind. The sun effortlessly lights up large open spaces such as numerous places for family gatherings or friends meetings, a functional kitchen with island and two bedrooms on the ground floor. Impresive balcony with a view in almost all directions and outdoors pool makes this property a living dream. 
+            </div>
+            <div class="button-container anim">
+                <button class="button hyperlink-button">see entire project</button>
+                <input type="hidden" value="projects/franklins house">
+            </div>
+        </div>
+
+        <h2 class="preview-header">
+            Modern house with open layout kitchen
+        </h2>
+
+        <div class="render-preview flex">
+            <div class="render anim" style="transform: rotate(6deg);">
+                <img src="images/render7.png">
+            </div>
+            <div class="render anim" style="transform: rotate(-5deg);">
+                <img src="images/render8.png">
+            </div>
+
+
+            <div class="render anim" style="transform: rotate(-12deg) translateY(-50px);">
+                <img src="images/render9.png">
+            </div>
+            <div class="description flex container-fluid anim">
+                A modern house with 2 bathrooms a large living room with open layout kitchen, 2 bedrooms, one master bedroom and a balcony. Two extra bedrooms are perfect for families with kids. Enourmous living room space can be a great place for family diners, parties or just a great way to spend time together.
+            </div>
+            <div class="button-container anim">
+                <button class="button hyperlink-button">see entire project</button>
+                <input type="hidden" value="projects/modern house">
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+{% block javascriptsBody %}
+    <script src="js/landingPage.js"></script>
+    <script src="js/returnButton.js"></script>
+    <script src="js/hyperlinkButton.js"></script>
+    <script src="js/scrollAnimation.js"></script>
+{% endblock %}
